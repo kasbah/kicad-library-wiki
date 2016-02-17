@@ -6,7 +6,7 @@ _With help from members of:_
 _[kicad-lib-committers](https://launchpad.net/~kicad-lib-committers)_  
 _[kicad-developers](https://launchpad.net/~kicad-developers)_  
 
-## General Rules
+## 1 General Rules
 
 1. Writing uses C-style naming with the first letter of each word being capitalized. Ex: "Socket_Strip_Straight_2x06"
 1. Every acronym has all of its letters capitalized.
@@ -18,12 +18,12 @@ _[kicad-developers](https://launchpad.net/~kicad-developers)_
 
 ## Symbol Libraries
 
-### Symbol Library Names (.lib files)
+### 2 Symbol Library Names (.lib files)
 
 1. Manufacturer.
 1. Category or family of parts. ex: "Capacitors", "Spartan6", etc.
 
-### General Rules for Symbols
+### 3 General Rules for Symbols
 
 1. Using a 100mil grid, pin ends and origin must lie on grid nodes (IEC-60617).
 1. For black-box symbols, pins have a length of 100mils. Large pin numbers can be accomodated by incrementing the width in steps of 50mils.
@@ -34,7 +34,7 @@ _[kicad-developers](https://launchpad.net/~kicad-developers)_
 1. The Value field is prefilled with the object name.
 1. Description and keywords properties contain the relevant information.
 
-### Symbol Names
+### 4 Symbol Names
 
 1. Name of symbol, may be shortened for common components or use reference designator of the symbol (IEEE 315-1975). ex: "Conn_4x2", "C", etc.
 1. Manufacturer.
@@ -44,14 +44,14 @@ _[kicad-developers](https://launchpad.net/~kicad-developers)_
 
 ## Footprint Libraries
 
-### Footprint Library Names (.pretty repositories)
+### 5 Footprint Library Names (.pretty repositories)
 
 1. Part type (resistor, cap, etc), must be in plural form.
 1. Package type (SOIC, SMD, etc).
 1. Manufacturer.
 1. Part number.
 
-### General Rules for Footprints
+### 6 General Rules for Footprints
 
 1. Follows datasheet recommendation unless intentional variation, for example longer pads for hand soldering.
 1. Pad 1 is on the left first, then at the top, except at the top for PLCC (IPC-7351).
@@ -63,7 +63,7 @@ _[kicad-developers](https://launchpad.net/~kicad-developers)_
 1. Cannot be duplicated to match a different pin ordering. This is to be handled in the symbol libraries.
 1. Value and reference have a height of 1mm.
 
-### Names for footprints of Surface-Mount Devices (SMD)
+### 7 Names for footprints of Surface-Mount Devices (SMD)
 
 1. Specific package feature first, not separated by anything. Ex: "TSSOP".
 1. Package name, numbers separated from letters using hyphen. Ex: "SOT-89".
@@ -71,21 +71,21 @@ _[kicad-developers](https://launchpad.net/~kicad-developers)_
 1. If it's a manufacturer-specific package, name can be appended, separated by an underscore.
 1. Any modification to the original footprint, indicated by appending the reason. Ex: longer pads used to facilitate hand soldering of a QFN component: "QFN-52_HandSoldering".
 
-### Names for footprints of common devices, such as resistors, capacitors, etc
+### 8 Names for footprints of common devices, such as resistors, capacitors, etc
 
 1. Name of part, may be shortened for common components. ex: "Cap", "Socket_Strip", etc.
 1. Dimension, which may include at its end the positioning. Ex: "5x7mm_Horiz", "1x02_Angled".
 1. Pad distance, in the form of an RM rating.
 1. Any modification to the original footprint, indicated by appending the reason.
 
-### Names for footprints of specific devices
+### 9 Names for footprints of specific devices
 
 1. Name of part.
 1. Part number. Ex: "Oscillator_SI570"
 1. Any modification to the original footprint, indicated by appending the reason.
 
 
-### Footprint properties
+### 10 Footprint properties
 
 1. Footprint name must match its filename. (.kicad_mod files)
 1. Doc property contains a full description of footprint.
